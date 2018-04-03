@@ -10,15 +10,20 @@ $num = $_POST["num"];
 echo "Number = ".$num."<br>";
 
 if(0 < $num && $num < 11) {
+	echo"<table border=0 >";
 for($a=0 ; $a < $num ; $a++ )
  {
- 	for($b=0 ; $b < $a+1 ; $b++) 
- 	{
- 	echo "#";
+ 	echo"<tr>";
+ 	for($d =9; $d > $a ; $d--) {
+ 		echo"<td>&nbsp;</td>";
  	}
- 	echo"<br>";
+ 	for($b=0 ; $b < $a+2 ; $b++) 
+ 	{
+ 	echo "<td>#</td>";
+ 	}
+ 	echo"</tr>";
  }
- 
+ echo"</table>";
 }else {
 	echo"Please enter between 1 to 10.";
 }
